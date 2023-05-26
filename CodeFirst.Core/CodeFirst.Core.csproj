@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exceptions\**" />
+    <Compile Remove="Helpers\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="QueryFilters\**" />
+    <Compile Remove="Wrappers\**" />
+    <EmbeddedResource Remove="Exceptions\**" />
+    <EmbeddedResource Remove="Helpers\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="QueryFilters\**" />
+    <EmbeddedResource Remove="Wrappers\**" />
+    <None Remove="Exceptions\**" />
+    <None Remove="Helpers\**" />
+    <None Remove="Models\**" />
+    <None Remove="QueryFilters\**" />
+    <None Remove="Wrappers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\Services\IUriService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.8" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFirst.Domain\CodeFirst.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

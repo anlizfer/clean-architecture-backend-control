@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeFirst.Web.Api</name>
+    </assembly>
+    <members>
+        <member name="M:CodeFirst.Web.Api.Controllers.AlumnoController.GetAll(CodeFirst.Core.QueryFilters.AlumnoQueryFilter)">
+             <summary>
+             Obtiene el listado Alumno de acuerdo a los filtros.
+             </summary>
+             <remarks>
+             Sample request:
+
+                 Get api/Ticket/1
+             </remarks>
+             <returns>Retorna Objeto alumno solicitado</returns>
+             <param name="filters">Identificador del objeto Alumno.</param>
+             <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
+             <response code="200">OK. Devuelve el objeto solicitado.</response>
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
+        </member>
+        <member name="M:CodeFirst.Web.Api.Controllers.AlumnoController.Get(System.Int32)">
+             <summary>
+             Obtiene un objeto Alumno por su Id.
+             </summary>
+             <remarks>
+             Sample request:
+
+                 Get api/Ticket/1
+             </remarks>
+             <returns>Retorna Objeto alumno solicitado</returns>
+             <param name="id">Identificador del objeto Alumno.</param>
+             <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
+             <response code="200">OK. Devuelve el objeto solicitado.</response>
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
+        </member>
+        <member name="M:CodeFirst.Web.Api.Controllers.AlumnoController.Post(CodeFirst.Core.DTOs.Alumno.Request.AlumnoAddDtoRequest)">
+             <summary>
+             Crea un nuevo objeto Alumno.
+             </summary>
+             <remarks>
+             Sample request:
+
+                 Post api/Alumno/
+             </remarks>
+             <returns>Retorna el Objeto alumno solicitado</returns>
+             <param name="alumno">El objeto Alumno.</param>
+             <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
+             <response code="200">OK. Devuelve el objeto solicitado.</response>
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
+        </member>
+        <member name="M:CodeFirst.Web.Api.Controllers.AlumnoController.Put(CodeFirst.Core.DTOs.Alumno.Request.AlumnoUpdateDtoRequest)">
+             <summary>
+             Actualiza el objeto Alumno.
+             </summary>
+             <remarks>
+             Sample request:
+
+                 Put api/Alumno/
+             </remarks>
+             <returns>Retorna el Objeto alumno solicitado</returns>
+             <param name="alumno">El objeto Alumno.</param>
+             <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
+             <response code="200">OK. Devuelve el objeto solicitado.</response>
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
+        </member>
+        <member name="M:CodeFirst.Web.Api.Controllers.AlumnoController.Delete(System.Int32)">
+             <summary>
+             Elimina el objeto Alumno.
+             </summary>
+             <remarks>
+             Sample request:
+
+                 Put api/Alumno/
+             </remarks>
+             <returns>Retorna el Objeto alumno solicitado</returns>
+             <param name="id">El objeto Alumno.</param>
+             <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
+             <response code="200">OK. Devuelve el objeto solicitado.</response>
+             <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
+        </member>
+    </members>
+</doc>
