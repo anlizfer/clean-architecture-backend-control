@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFirst.Core\CodeFirst.Core.csproj" />
+    <ProjectReference Include="..\CodeFirst.Domain\CodeFirst.Domain.csproj" />
+    <ProjectReference Include="..\CodeFirst.Infrastructure\CodeFirst.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\RepositoryAsync\" />
+  </ItemGroup>
+
 </Project>
