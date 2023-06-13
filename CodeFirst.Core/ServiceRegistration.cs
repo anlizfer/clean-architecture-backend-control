@@ -1,6 +1,7 @@
 ﻿using CodeFirst.Core.Features.Account;
 using CodeFirst.Core.Features.CourseServices;
 using CodeFirst.Core.Features.DataProtectionService;
+using CodeFirst.Core.Features.DocumentTypeServices;
 using CodeFirst.Core.Features.InscriptionServices;
 using CodeFirst.Core.Features.StudentServices;
 using CodeFirst.Core.Interfaces.Services;
@@ -14,6 +15,8 @@ namespace CodeFirst.Core
     {
         public static void AddCoreLayer(this IServiceCollection services)
         {
+
+            services.AddTransient<IDocumentTypeService, DocumentTypeService>();
             services.AddTransient<IStudentService, StudentServices>();
             services.AddTransient<ICourseService, CourseService>();
             services.AddTransient<IInscriptionService, InscriptionService>();

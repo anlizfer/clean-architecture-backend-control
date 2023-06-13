@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CodeFirst.Core.DTOs.Account.Responses;
 using CodeFirst.Core.DTOs.Course.Response;
+using CodeFirst.Core.DTOs.DocumentType.Response;
 using CodeFirst.Core.DTOs.Request.Course.Requests;
 using CodeFirst.Core.DTOs.Request.Inscription.Requests;
 using CodeFirst.Core.DTOs.Security;
@@ -15,6 +16,9 @@ namespace CodeFirst.Core.Mappings
     {
         public GeneralProfile()
         {
+
+            CreateMap<DocumentType,DocumentTypeDtoResponse>();
+
             CreateMap<StudentAddDtoRequest, Student>();
             CreateMap<Student, StudentDtoResponse>();
 

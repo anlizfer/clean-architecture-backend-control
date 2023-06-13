@@ -28,6 +28,7 @@ namespace CodeFirst.Infrastructure.Repositories
         public IGenericRepository<IdentityUser> UserRepositoryAsync => new UserRepositoryAsync(_context);
 
         public IGenericRepository<IdentityRole> RoleRepositoryAsync => new RoleRepositoryAsync(_context);
+        public IGenericRepository<DocumentType> DocumentTypeRepositoryAsync => new DocumentTypeRepositoryAsync(_context);
 
         public async Task BeginTransactionAsync()
         {

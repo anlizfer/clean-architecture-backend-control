@@ -21,6 +21,7 @@ namespace CodeFirst.Infrastructure.Settings
         public virtual DbSet<Student> Alumnos { get; set; }
         public virtual DbSet<Course> Cursos { get; set; }
         public virtual DbSet<Inscription> Inscripciones { get; set; }
+        public virtual DbSet<DocumentType> TipoDocumento { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

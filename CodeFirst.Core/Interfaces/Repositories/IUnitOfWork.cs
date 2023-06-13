@@ -12,6 +12,7 @@ namespace CodeFirst.Core.Interfaces.Repositories
         IGenericRepository<Inscription> InscriptionRepositoryAsync { get; }
         IGenericRepository<IdentityUser> UserRepositoryAsync { get; }
         IGenericRepository<IdentityRole> RoleRepositoryAsync { get; }
+        IGenericRepository<DocumentType> DocumentTypeRepositoryAsync { get; }
 
         Task BeginTransactionAsync();
 
