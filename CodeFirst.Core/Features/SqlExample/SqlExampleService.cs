@@ -23,7 +23,7 @@ namespace CodeFirst.Core.Features.SqlExample
 
         public async Task<Response<String>> GetSQLResult()
         {
-            var result=await RepositoryOled.ExecStoreSQLAsync("SELECT * FROM table");
+            var result=await RepositoryOled.ExecStoreSQLAsync("SELECT * FROM DocumentType");
             return new Response<String>("Cadena respuesta") { Message = "La información solicitada ha sido exitosa." };
         }
 

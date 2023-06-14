@@ -1,6 +1,7 @@
 using CodeFirst.Core;
 using CodeFirst.Infrastructure;
 using CodeFirst.Infrastructure.Settings;
+using CodeFirst.InfrastructureOLEDB;
 using CodeFirst.Web.Api.Extensions.App;
 using CodeFirst.Web.Api.Extensions.Service;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,7 @@ namespace CodeFirst.Web.Api
             services.AddDbContexts(Configuration);
             services.AddIdentity();
             services.AddRepository();
+            services.AddRepositoryOLEDB();
 
             //Core
             services.AddCoreLayer();

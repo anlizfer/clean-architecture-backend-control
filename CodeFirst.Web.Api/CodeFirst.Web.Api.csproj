@@ -43,6 +43,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CodeFirst.Core\CodeFirst.Core.csproj" />
     <ProjectReference Include="..\CodeFirst.Domain\CodeFirst.Domain.csproj" />
+    <ProjectReference Include="..\CodeFirst.InfrastructureOLEDB\CodeFirst.InfrastructureOLEDB.csproj" />
     <ProjectReference Include="..\CodeFirst.Infrastructure\CodeFirst.Infrastructure.csproj" />
   </ItemGroup>
 

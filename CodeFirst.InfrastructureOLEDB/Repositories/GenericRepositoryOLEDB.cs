@@ -2,12 +2,7 @@
 using CodeFirst.Domain.Exceptions;
 using CodeFirst.Infrastructure.Settings;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeFirst.InfrastructureOLEDB.Repositories
 {
