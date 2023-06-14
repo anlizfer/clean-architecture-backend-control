@@ -13,9 +13,11 @@ namespace CodeFirst.Web.Api.Controllers
     {
 
         private readonly IDocumentTypeService _documentTypeService;
-        public DocumentTypeController(IDocumentTypeService DocumentTypeService)
+        private readonly ISqlExampleService _sqlExampleService;
+        public DocumentTypeController(IDocumentTypeService DocumentTypeService, ISqlExampleService sqlExampleService)
         {
             _documentTypeService = DocumentTypeService;
+            _sqlExampleService = sqlExampleService;
         }
 
         /// <summary>
@@ -37,5 +39,8 @@ namespace CodeFirst.Web.Api.Controllers
         {
             return Ok(await _documentTypeService.GetTypeDocumentAsync(id).ConfigureAwait(false));
         }
+
+      
+
     }
 }

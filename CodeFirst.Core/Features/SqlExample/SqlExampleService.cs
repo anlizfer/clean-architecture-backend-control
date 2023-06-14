@@ -1,5 +1,6 @@
 ﻿using CodeFirst.Core.DTOs.Course.Response;
 using CodeFirst.Core.Interfaces.Repositories;
+using CodeFirst.Core.Interfaces.Services;
 using CodeFirst.Domain.Wrappers;
 using Microsoft.Data.SqlClient.Server;
 using System;
@@ -10,13 +11,14 @@ using System.Threading.Tasks;
 
 namespace CodeFirst.Core.Features.SqlExample
 {
-    public class SqlExampleService
+    public class SqlExampleService:ISqlExampleService
     {
         private readonly IGenericRepositoryOLEDB RepositoryOled;
 
-        public SqlExampleService(IGenericRepositoryOLEDB _RepositoryOled)
+        public SqlExampleService(IGenericRepositoryOLEDB repositoryOled)
         {
-            RepositoryOled = _RepositoryOled;
+            RepositoryOled = repositoryOled;
+            //RepositoryOled = _RepositoryOled;
         }
 
         public async Task<Response<String>> GetSQLResult()
