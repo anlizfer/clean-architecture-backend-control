@@ -40,7 +40,28 @@ namespace CodeFirst.Web.Api.Controllers
             return Ok(await _documentTypeService.GetTypeDocumentAsync(id).ConfigureAwait(false));
         }
 
-      
+
+        /// <summary>
+        /// Obtiene un los datos de un curso.
+        /// </summary>
+        /// <remarks>
+        /// Los datos del curso se obtiene por su Id.
+        /// </remarks>
+        /// <returns>Retorna los datos del curso solicitado.</returns>
+        /// <param name="id">Identificador del objeto curso.</param>
+        /// <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
+        /// <response code="200">OK. Devuelve la información solicitada.</response>
+        /// <response code="404">NotFound. No se ha encontrado la información solicitada.</response>
+        [HttpGet("sqlexample/{id:int}", Name = "sqlexample")]
+        [ProducesResponseType(typeof(Response<bool>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Response<bool>), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(Response<bool>), StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetSQL([FromRoute] long id)
+        {
+            return Ok(await _sqlExampleService.GetSQLResult());
+        }
+
+
 
     }
 }

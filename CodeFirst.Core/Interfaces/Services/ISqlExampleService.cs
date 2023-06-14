@@ -1,4 +1,5 @@
-﻿using CodeFirst.Domain.Wrappers;
+﻿using CodeFirst.Domain.Entities;
+using CodeFirst.Domain.Wrappers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace CodeFirst.Core.Interfaces.Services
 {
     public interface ISqlExampleService
     {
-        Task<Response<String>> GetSQLResult();
+        Task<Response<IEnumerable<DocumentType>>> GetSQLResult();
     }
 }
