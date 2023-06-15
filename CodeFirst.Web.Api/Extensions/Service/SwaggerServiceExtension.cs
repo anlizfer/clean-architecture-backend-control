@@ -15,16 +15,16 @@ namespace CodeFirst.Web.Api.Extensions.Service
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Clean Architecture - WebApi",
+                    Title = "Clean Architecture - Control Docs",
                     Description = "Esta API será responsable de la distribución y autorización general de los datos.",
                     Contact = new OpenApiContact
                     {
                         Name = "Angel Lizcano Novoa",
-                        Email = "angel.lizcano.sie@Hotmail.com",
+                        Email = "angel.lizcano.sie@gmail.com",
                         Url = new Uri("https://www.linkedin.com/in/angel-fernando-lizcano-novoa-82982626/"),
                     },
                 });
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                /*c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
                     In = ParameterLocation.Header,
@@ -48,7 +48,7 @@ namespace CodeFirst.Web.Api.Extensions.Service
                             In = ParameterLocation.Header,
                         }, new List<string>()
                     },
-                });
+                });*/
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = System.IO.Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);

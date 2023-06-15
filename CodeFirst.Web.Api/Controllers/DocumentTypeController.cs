@@ -21,12 +21,12 @@ namespace CodeFirst.Web.Api.Controllers
         }
 
         /// <summary>
-        /// Obtiene un los datos de un curso.
+        /// Obtiene un los datos de tipo de documento (Entity Framework)
         /// </summary>
         /// <remarks>
-        /// Los datos del curso se obtiene por su Id.
+        /// Los datos del tipo documento se obtiene por su Id.  (Entity Framework)
         /// </remarks>
-        /// <returns>Retorna los datos del curso solicitado.</returns>
+        /// <returns>Retorna los datos del tipo documento solicitado.  (Entity Framework) </returns>
         /// <param name="id">Identificador del objeto curso.</param>
         /// <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
         /// <response code="200">OK. Devuelve la información solicitada.</response>
@@ -42,17 +42,17 @@ namespace CodeFirst.Web.Api.Controllers
 
 
         /// <summary>
-        /// Obtiene un los datos de un curso.
+        /// Obtiene un los datos de tipo de documento (SQL)
         /// </summary>
         /// <remarks>
-        /// Los datos del curso se obtiene por su Id.
+        /// Los datos del tipo documento se obtiene por su Id.  (SQL)
         /// </remarks>
-        /// <returns>Retorna los datos del curso solicitado.</returns>
+        /// <returns>Retorna los datos del tipo documento solicitado.  (Entity Framework) </returns>
         /// <param name="id">Identificador del objeto curso.</param>
         /// <response code="500">InternalServerError. Ha ocurrido una exception no controlada.</response>
         /// <response code="200">OK. Devuelve la información solicitada.</response>
         /// <response code="404">NotFound. No se ha encontrado la información solicitada.</response>
-        [HttpGet("sqlexample/{id:int}", Name = "sqlexample")]
+        [HttpGet("sqlexample/{id:int}", Name = "sqlExample")]
         [ProducesResponseType(typeof(Response<bool>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Response<bool>), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(Response<bool>), StatusCodes.Status500InternalServerError)]

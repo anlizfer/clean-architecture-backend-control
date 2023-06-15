@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using CodeFirst.Core.DTOs.DocumentType.Response;
-using CodeFirst.Core.DTOs.Student.Response;
 using CodeFirst.Core.Interfaces.Repositories;
 using CodeFirst.Core.Interfaces.Services;
 using CodeFirst.Domain.Entities;

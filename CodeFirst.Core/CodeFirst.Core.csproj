@@ -39,4 +39,8 @@
     <ProjectReference Include="..\CodeFirst.Domain\CodeFirst.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
 </Project>

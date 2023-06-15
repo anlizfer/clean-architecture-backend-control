@@ -1,5 +1,4 @@
 ﻿using CodeFirst.Domain.Entities;
-using CodeFirst.Infrastructure.Seeds;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -17,10 +16,7 @@ namespace CodeFirst.Infrastructure.Settings
             : base(options)
         {
         }
-
-        public virtual DbSet<Student> Alumnos { get; set; }
-        public virtual DbSet<Course> Cursos { get; set; }
-        public virtual DbSet<Inscription> Inscripciones { get; set; }
+        
         public virtual DbSet<DocumentType> TipoDocumento { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -28,8 +24,7 @@ namespace CodeFirst.Infrastructure.Settings
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
-            modelBuilder.SeedData();
+            
         }
     }
 }

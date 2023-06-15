@@ -17,17 +17,9 @@ namespace CodeFirst.Infrastructure.Repositories
         public UnitOfWork(CodeFirstContext context)
         {
             _context = context;
-        }
+        }        
 
-        public IGenericRepository<Student> StudentRepositoryAsync => new StudentRepositoryAsync(_context);
 
-        public IGenericRepository<Course> CourseRepositoryAsync => new CourseRepositoryAsync(_context);
-
-        public IGenericRepository<Inscription> InscriptionRepositoryAsync => new InscriptionRepositoryAsync(_context);
-
-        public IGenericRepository<IdentityUser> UserRepositoryAsync => new UserRepositoryAsync(_context);
-
-        public IGenericRepository<IdentityRole> RoleRepositoryAsync => new RoleRepositoryAsync(_context);
         public IGenericRepository<DocumentType> DocumentTypeRepositoryAsync => new DocumentTypeRepositoryAsync(_context);
 
         public async Task BeginTransactionAsync()
