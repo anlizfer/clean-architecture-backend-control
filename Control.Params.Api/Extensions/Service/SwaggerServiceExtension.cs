@@ -12,15 +12,15 @@ namespace Control.Params.api.Extensions.Service
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo
+                c.SwaggerDoc("v1.0.0", new OpenApiInfo
                 {
-                    Version = "v1",
-                    Title = "Clean Architecture - Control Docs",
+                    Version = "v1.0.0",
+                    Title = "Control.Params.Api",
                     Description = "Esta API será responsable de la distribución y autorización general de los datos.",
                     Contact = new OpenApiContact
                     {
-                        Name = "Angel Lizcano Novoa",
-                        Email = "angel.lizcano.sie@gmail.com",
+                        Name = "Alexander Cordero",
+                        Email = "alexander.cordero@gmail.com",
                         Url = new Uri("https://www.linkedin.com/in/angel-fernando-lizcano-novoa-82982626/"),
                     },
                 });
