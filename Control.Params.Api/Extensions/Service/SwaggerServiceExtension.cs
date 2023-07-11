@@ -12,7 +12,7 @@ namespace Control.Params.api.Extensions.Service
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1.0.0", new OpenApiInfo
+                c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1.0.0",
                     Title = "Control.Params.Api",

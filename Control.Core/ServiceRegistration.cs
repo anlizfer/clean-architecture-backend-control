@@ -1,4 +1,5 @@
-﻿using Control.Core.Features.DocumentTypeServices;
+﻿using Control.Core.Features.CountriesServices;
+using Control.Core.Features.DocumentTypeServices;
 using Control.Core.Features.SqlExample;
 using Control.Core.Interfaces.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +13,8 @@ namespace Control.Core
         {
 
             services.AddTransient<ISqlExampleService, SqlExampleService>();
-            services.AddTransient<IDocumentTypeService, DocumentTypeService>();            
+            services.AddTransient<IDocumentTypeService, DocumentTypeService>();
+            services.AddTransient<ICountriesService, CountriesService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
     }

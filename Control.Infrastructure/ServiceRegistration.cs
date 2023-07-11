@@ -18,15 +18,7 @@ namespace Control.Infrastructure
             return services;
         }
 
-        public static IServiceCollection AddIdentity(this IServiceCollection services)
-        {
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                 .AddEntityFrameworkStores<ControlContext>()
-                 .AddDefaultTokenProviders();
-
-            return services;
-        }
-
+        
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
             services.AddTransient<IUnitOfWork, UnitOfWork>();

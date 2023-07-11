@@ -30,8 +30,7 @@ namespace Control.Params.api
         public void ConfigureServices(IServiceCollection services)
         {
             //Infraestructura
-            services.AddDbContexts(Configuration);
-            services.AddIdentity();
+            services.AddDbContexts(Configuration);            
             services.AddRepository();
             services.AddRepositoryOLEDB();
 

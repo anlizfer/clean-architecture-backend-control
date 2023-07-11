@@ -9,6 +9,8 @@ namespace Control.Core.Interfaces.Repositories
     {
        
         IGenericRepository<DocumentType> DocumentTypeRepositoryAsync { get; }
+        IGenericRepository<Countries> CountriesRepositoryAsync { get; }
+        IGenericRepository<States> StatesRepositoryAsync { get; }
 
         Task BeginTransactionAsync();
 

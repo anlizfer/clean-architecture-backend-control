@@ -21,6 +21,8 @@ namespace Control.Infrastructure.Repositories
 
 
         public IGenericRepository<DocumentType> DocumentTypeRepositoryAsync => new DocumentTypeRepositoryAsync(_context);
+        public IGenericRepository<Countries> CountriesRepositoryAsync => new CountriesRepository(_context);
+        public IGenericRepository<States> StatesRepositoryAsync => new StatesRepository(_context);
 
         public async Task BeginTransactionAsync()
         {
